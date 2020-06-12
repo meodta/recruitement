@@ -1,0 +1,51 @@
+@import "../../Styles";
+
+$secondary_10: darken($secondary, 10);
+$secondary_40: darken($secondary, 40);
+$accent_0_2: transparentize($accent, 0.2);
+
+.main-view {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 400px;
+  height: 600px;
+  padding: 8px 16px;
+  background-color: white;
+
+  & > * {
+    margin: 8px 0;
+  }
+
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  input {
+    background-color: $secondary;
+    border: 1px solid $secondary_10;
+    padding:8px 10px;
+    font-size: 14px;
+
+    &::placeholder {
+      color:  $secondary_40;
+    }
+  }
+
+  button {
+    background-color: $accent;
+    padding: 10px 12px;
+    border: 0;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    border-radius: 2px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $accent_0_2;
+    }
+  }
+}

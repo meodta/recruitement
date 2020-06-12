@@ -1,0 +1,23 @@
+@import "Styles";
+@import "~antd/dist/antd.compact.min.css";
+
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: $secondary;
+  font-size: 14px;
+}
+
+* {
+  transition: all 300ms ease-out;
+}
+
+input, button {
+  &:focus {
+    outline: none;
+  }
+}
